@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repository</title>
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="tab_link clr">
+			<li>
+				<a href="javascript:void(0)" data-tab="tab1">
+					<img src="img/img_nature.jpg" alt="" class='img_responsive'>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" data-tab="tab2">
+					<img src="img/img_fjords.jpg" alt="" class='img_responsive'>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" data-tab="tab3">
+					<img src="img/img_mountains.jpg" alt="" class='img_responsive'>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" data-tab="tab4">
+					<img src="img/img_lights.jpg" alt="" class='img_responsive'>
+				</a>
+			</li>
+		</ul>
+		<div class="tab_container">
+			<div class="tab_content active" id="tab1">
+				<div class="thumb">
+					<a href="javascript:void(0)" class="close">&times;</a>
+					<img src="img/img_nature.jpg" alt="" class='img_responsive'>
+				</div>
+			</div>
+			<div class="tab_content" id="tab2">
+				<div class="thumb">
+					<a href="javascript:void(0)" class="close">&times;</a>
+					<img src="img/img_fjords.jpg" alt="" class='img_responsive'>
+				</div>
+			</div>
+			<div class="tab_content" id="tab3">
+				<div class="thumb">
+					<a href="javascript:void(0)" class="close">&times;</a>
+					<img src="img/img_mountains.jpg" alt="" class='img_responsive'>
+				</div>
+			</div>
+			<div class="tab_content" id="tab4">
+				<div class="thumb">
+					<a href="javascript:void(0)" class="close">&times;</a>
+					<img src="img/img_lights.jpg" alt="" class='img_responsive'>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$(".tab_link li a").click(function(){
+				var tabbed = $(this).attr('data-tab');
+				$(".tab_link li a").removeClass('active');
+				$(".tab_content").removeClass('active');
+				$(this).addClass('active');
+				$("#"+tabbed).addClass('active');
+			});		
+		});
+	</script>
+</body>
+</html>
